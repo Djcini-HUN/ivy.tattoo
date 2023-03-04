@@ -1,0 +1,15 @@
+https://www.behance.net/gallery/79069747/My-Portfolio-Website-UXUI
+sec 1
+left fekete
+white szöveg
+white box fekete szöveg
+navbar - csillogós
+
+sec 2 
+rozsaszin
+fekete szöveg
+kép shadow csillogós
+
+sec 3
+feher hatter
+kepek grid box shadow
