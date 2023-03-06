@@ -1,8 +1,21 @@
 /* NAVBAR */
+*{
+    scroll-behavior: smooth;
+}
+html,body {
+    width: 100%;
+    /* height: 100%;      Ez elrontja a scrolling effectet! */
+    /* margin: 0px;
+    padding: 0px; */
+    overflow-x:hidden!important;
+}
+a{
+    text-decoration: none;
+}
 nav :first-child{
     font-family: 'Playfair Display', serif;
     font-weight: 600;
-    font-size: 1.06em;
+    font-size: clamp(1.05em,1vw,1vw);
     color: black;
 }
 nav{
@@ -18,21 +31,37 @@ nav{
 .nav-link{
     padding: 0;
 }
-@media  screen and (min-width: 768px) {
-    .nav-link:hover, .nav-link:focus{
+@media  screen and (max-width: 768px){
+    .navbar-nav{
+    margin-bottom: 0.5rem;
+    }
+}
+
+.navbar-nav .nav-link{
+    padding: 0.3rem;
+}
+.navbar-nav .dropdown-menu{
+    border: none!important;
+}
+@media  screen and (min-width: 992px) {
+    .navbar-nav .nav-link:hover, .navbar-nav .nav-link:focus{
         border-bottom: 2px solid black;
-        font-size: 1.1em;
     }
 }
 .dropdown-menu{
     padding-inline: 2.5rem;
 }
-.dropdown-item:hover, .dropdown-item:focus{
-    border-inline: 2px solid black;
-    font-size: 1.1em;
+.dropdown-item{
+    margin: 0.2rem;
+}
+@media  screen and (min-width: 992px) {
+    .dropdown-item:hover, .dropdown-item:focus{
+        border-inline: 2px solid black;
+        font-size: 1.1em;
+    }
 }
 @media screen and (min-width: 768px){
-    .navbar-transparent{
+    .navbar-transparent {
         transition: background ease 1.5s;
         background: rgba(255,255,255,.2);
         backdrop-filter: blur(5px);
@@ -47,26 +76,78 @@ nav{
     background-color: #101010;
     color:white;
     font-family: 'Comforter Brush', cursive;
+    /* padding-bottom: 4rem; */
 }
-.FirstSection span:first-child{
-    font-size: clamp(2em,7vw,7vw);
+.Main-spanok{
+    padding-top: 4rem;
 }
-.FirstSection span:last-child{
-    font-size:clamp(1.5em,4vw,4vw);
+.Main-spanok > div:nth-of-type(1) {
+    font-size: clamp(3.8em,7vw,7vw);
+    width: fit-content;
+}
+.Main-spanok > div:nth-of-type(2) {
+    font-size:clamp(2em,3vw,3vw);
     background-color: white;
+    width:fit-content;
+    height: fit-content;
     color: black;
     padding-inline: 0.5em;
+    border: 1px solid black;
+    box-shadow: 0px 0px 10px 1px white;
+    border-radius: 5px;
 }
+.Main-spanok-3 > div{
+    font-size:clamp(2em,3vw,3vw);
+    background-color: white;
+    width:fit-content;
+    height: fit-content;
+    color: black;
+    padding-inline: 0.3em;
+    border: 1px solid black;
+    box-shadow: 0px 0px 10px 1px white;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+.ivy{
+    width: 60vw;
+}
+@media screen and (max-width: 576px){
+    .FirstSection img{
+        width: 75%;
+        margin-inline: auto;
+    }
+    .Main-spanok{
+        padding-top: 0.5rem;
+    }
+    .Main-spanok > div:nth-of-type(2){
+        box-shadow: 0px 0px 6px 1px white;
+    }
+    .Main-spanok-3 > div{
+        box-shadow: 0px 0px 6px 1px white;
+    }
+}
+@media screen and (max-width: 992px){
+    .Main-spanok{
+        padding-top: 1rem;
+    }
+}
+
 /* SECTION-2 */
-.SecondSection{
-    /* margin-inline: 5rem; */
-}
-.SecondSection img{
-    box-shadow: -32px -32px 0px 0px grey;
-}
+
 .ivy2{
-    width: clamp(13rem,25vw,25vw);
-    /* margin: 10rem 3rem 5rem 10rem; */
+    width: clamp(18rem,22vw,22vw);
+    filter: grayscale(100%);
+    box-shadow: 0px 0px 15px 5px #101010;
+    padding: 0 !important;
+}
+.SecondSection .whoivyrow{
+    padding-right: 3rem;
+}
+@media screen and (max-width: 768px){
+    .SecondSection .whoivyrow{
+        margin:0 !important;
+        padding:0 !important;
+    }
 }
 .s3{
     height: 1000px;
@@ -79,4 +160,88 @@ nav{
 .SecondSection p{
     font-family: 'Lobster', cursive,sans-serif;
     /* font-size: 2.5em; */
+}
+.ThirdSection{
+    background-color: #101010;
+    color: white;
+    padding-bottom: 2rem;
+}
+.ThirdSection h2{
+    font-family: 'Lobster', cursive,sans-serif;
+    padding-top: 2rem;
+}
+.ThirdSection img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%);
+    margin-top: 1.3rem;
+    box-shadow: 0px 0px 5px 2px white;
+    /* margin-bottom: 1rem; */
+}
+
+.FourthSection{
+    background-color: #101010;
+    color: white;
+    padding-block: 1.5rem;
+    font-family: 'Lobster', cursive,sans-serif;
+    font-weight: 100;
+}
+.FourthSection form{
+    width: 40vw;
+    background-color: rgba(255,255,255,.1);
+    color: black;
+    box-shadow: 0px 0px 6px 1px white;
+
+}
+.ls-1{
+    letter-spacing: 5px;
+}
+@media screen and (max-width: 992px){
+    .FourthSection form{
+        width: 60vw;
+    }
+}
+@media screen and (max-width: 768px){
+    .FourthSection form{
+        width: 95vw;
+    }
+}
+
+.FourthSection input, .FourthSection textarea, .FourthSection button{
+    /* border: 1px solid black; */
+    box-shadow: 0px 0px 6px 1px black;
+}
+.FourthSection input:hover, .FourthSection textarea:hover, .FourthSection button:hover{
+    box-shadow: 0px 0px 6px 1px black;
+}
+.FourthSection input:focus, .FourthSection textarea:focus, .FourthSection button:focus{
+    box-shadow: 0px 0px 6px 1px black;
+}
+
+#footer{
+    font-family: 'Lobster', cursive,sans-serif;
+    background-color: #101010;
+    font-size:clamp(1em,1vw,1vw);
+}
+.social-footer{
+    padding-bottom: 2rem;
+}
+.social-footer a{
+    margin-inline: 2rem;
+    color: black;
+}
+.social-footer-divs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 3.4rem;
+    height: 3.4rem;
+    background-color: white;
+    border-radius: 50%;
+}
+.social-footer-divs:hover,.social-footer-divs:focus{
+    transform: scale(110%);
+    transition: all 200ms;
 }
